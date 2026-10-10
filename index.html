@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Discovery Foundation Models | ICLR 2027 Workshop Proposal</title>
+<meta name="description" content="A proposed ICLR 2027 workshop on foundation-model systems that take part in creating and validating new knowledge. Proposal under review; not yet accepted.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#FAF9FB" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#15131C" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Discovery Foundation Models: From Solving Problems to Discovering Knowledge">
+<meta property="og:description" content="A proposed ICLR 2027 workshop. Proposal under review; not yet accepted.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body id="top">
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="shell site-head__inner">
+    <a class="wordmark" href="#top">
+      <b>Discovery Foundation Models</b>
+      <span>ICLR 2027 workshop proposal</span>
+    </a>
+    <nav class="nav" aria-label="Sections of this page">
+      <a href="#overview">Overview</a>
+      <a href="#challenges">Challenges</a>
+      <a href="#topics">Topics</a>
+      <a href="#submissions">Submissions</a>
+      <a href="#dates">Dates</a>
+      <a href="#programme">Programme</a>
+      <a href="#organizers">Organizers</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+  <!-- ============================ hero ============================ -->
+  <section class="hero shell" aria-labelledby="title">
+   <div class="hero__grid">
+    <div class="hero__text">
+    <p class="eyebrow">Proposed workshop at ICLR 2027</p>
+    <h1 id="title">Discovery Foundation Models</h1>
+    <p class="hero__sub">From Solving Problems to Discovering Knowledge</p>
+    <p class="hero__lede">
+      A workshop on foundation-model systems that take part in creating and
+      validating new knowledge, rather than only searching for solutions inside
+      a research structure that people have already fixed.
+    </p>
+
+    </div>
+
+    <div class="hero__side">
+    <ul class="facts">
+      <li><b>Format</b>Full day, in person</li>
+      <li><b>Location</b>San Francisco</li>
+      <li><b>Proposed date</b>April 29 or 30, 2027</li>
+      <li><b>Status</b>Proposal under review</li>
+    </ul>
+
+    <div class="notice" role="note" aria-labelledby="notice-tag">
+      <p class="notice__tag" id="notice-tag">Proposal stage</p>
+      <p>
+        This workshop has not been accepted. It is a proposal under review for
+        ICLR 2027. Acceptance, the day it would be held, the programme and every
+        date below depend on that review, and submissions are not open.
+      </p>
+      <p>
+        Invited speakers are not listed on this page. They will be listed once
+        they have confirmed.
+      </p>
+    </div>
+
+    </div>
+
+    <div class="actions hero__actions">
+      <a class="btn btn--primary" href="#overview">Read the overview</a>
+      <a class="btn btn--quiet" href="#programme">See the proposed programme</a>
+    </div>
+   </div>
+  </section>
+
+  <!-- ============================ figure ============================ -->
+  <div class="shell">
+    <figure class="teaser">
+      <div class="teaser__plate">
+        <img src="assets/img/dfm-teaser-1800.webp"
+             srcset="assets/img/dfm-teaser-900.webp 900w, assets/img/dfm-teaser-1800.webp 1800w"
+             sizes="(max-width: 900px) 100vw, 1060px"
+             width="1800" height="1077"
+             alt="A three-part diagram. On the left, a rising curve marks three stages of intelligence scaling: Chat, which learns existing knowledge from public data and pretraining; Agent and Coding, which learns from action outcomes through executable experience, test feedback and iterative correction; and Discovery, which creates and validates new knowledge from verifiable evidence, a discovery policy and real-world validation. In the middle, current foundation models operate on predefined tasks through knowledge, reasoning, tool use and agentic execution, with the research structure fixed by humans. On the right, discovery foundation models operate on the knowledge-production process itself through four capabilities: identifying valuable unknowns, constructing and revising research structure, testing explanations against external evidence, and improving discovery capability across tasks; here the research structure is the object of model action and revision. Along the bottom runs the recursive discovery loop: a partially understood world leads to valuable unknowns, then to a researchable problem, then to an explanation and intervention, then to validated new knowledge, which updates world understanding and starts the loop again.">
+      </div>
+      <figcaption>
+        <b>From solving problems to discovering knowledge.</b>
+        Left: intelligence scaling from learning existing knowledge to learning
+        from action outcomes to creating and validating new knowledge. Middle and
+        right: from predefined tasks whose research structure is fixed by humans
+        to systems that act on and revise that structure. Bottom: the recursive
+        discovery loop. Adapted from the Discovery Foundation Models technical
+        report. <a href="assets/img/dfm-teaser-1800.webp">View the figure at full size.</a>
+      </figcaption>
+    </figure>
+  </div>
+
+  <!-- ============================ 01 overview ============================ -->
+  <section class="sec" id="overview" aria-labelledby="h-overview">
+    <div class="shell">
+      <div class="sec__head">
+        <span class="sec__num">01 · Overview</span>
+        <h2 id="h-overview">What the next step after problem solving looks like</h2>
+      </div>
+
+      <div class="stack prose">
+        <p>
+          Foundation models have advanced in stages, each defined by what they
+          learn from. They first learned from what humans wrote: large-scale
+          pretraining turned them into broad stores of existing knowledge. They
+          then began to learn from the outcomes of their own actions through
+          reasoning, tool use, code execution and agentic workflows driven by
+          verifiable feedback. In science, the same capabilities now support
+          protein structure prediction, materials discovery and weather
+          forecasting, and AI co-scientists, AI-scientist systems and
+          self-driving laboratories increasingly connect model-generated
+          hypotheses to experiments, mostly within goals and setups that people
+          have chosen.
+        </p>
+
+        <p>
+          <span class="lead-in">The ceiling is a research structure fixed by
+          humans.</span>
+          Most current systems, however capable, begin from a research structure
+          that people have already chosen, namely the problem, its
+          representation, the objective, the tools and the evaluator, and they
+          search for a solution inside it. The limitation is not a lack of
+          scientific knowledge or reasoning. Most training and evaluation
+          pipelines reward competence only after this structure has been fixed,
+          and more competence inside the structure does not by itself repair it.
+          A fixed representation cannot express a variable it omits, so a
+          persistent failure may reflect a missing variable rather than a weak
+          optimizer. A search objective cannot recover a property its evaluator
+          ignores, so a benchmark can reward a proxy. And more samples cannot
+          separate two mechanisms when the available observable does not
+          distinguish them. An automated workflow can therefore pursue a
+          misframed question more efficiently without becoming any better at
+          noticing the misframing.
+        </p>
+
+        <p>
+          <span class="lead-in">From problem solving to discovery
+          intelligence.</span>
+          We refer to the missing capability, changing the research structure
+          itself rather than only working inside it, as discovery intelligence.
+          In a discovery episode this structure is not fixed: the episode starts
+          from a partially understood world and must produce both externally
+          validated progress and a record of how the problem, representation,
+          hypotheses and evidence were revised. The gap lies in three transitions
+          that are still left to people: framing, turning observations and
+          uncertainty into a problem worth pursuing; modeling, constructing the
+          variables in which competing explanations become expressible and
+          distinguishable; and grounding and revision, choosing evidence that can
+          change an explanation's status and attributing failures to the right
+          cause.
+        </p>
+
+        <p>
+          A <span class="lead-in">Discovery Foundation Model</span> is a
+          general-purpose model system that performs these transitions and
+          becomes better at them. It acts not on a fixed task but on an explicit,
+          revisable research state: a linked record of the current problem,
+          representation, hypotheses, evidence and interventions, and of why each
+          was revised. It is defined by what it can construct and revise, not by
+          its architecture or degree of autonomy, and the unit that is evaluated
+          and credited is the whole system, including its tools, validators and
+          human collaborators.
+        </p>
+      </div>
+
+      <ul class="triad">
+        <li>
+          <b>Find</b>
+          <strong>Framing and modeling</strong>
+          <span>
+            Identify valuable unknowns, formulate researchable problems,
+            construct and revise representations, and form testable explanations.
+          </span>
+        </li>
+        <li>
+          <b>Test</b>
+          <strong>Grounding and revision</strong>
+          <span>
+            Design informative interventions and revise explanations from
+            external evidence the system cannot rewrite after seeing the result.
+          </span>
+        </li>
+        <li>
+          <b>Improve</b>
+          <strong>Learning and recursion</strong>
+          <span>
+            Become better at these operations across tasks and domains, with the
+            checks that decide whether a change is kept left outside
+            self-modification.
+          </span>
+        </li>
+      </ul>
+
+      <div class="stack prose mt-7">
+        <p>
+          <span class="lead-in">Why science.</span>
+          Science is where this capability can be learned and tested, because it
+          is an environment that pushes back. Questions are underspecified,
+          variables hidden, interventions costly and outcomes delayed; above all,
+          evidence arrives from experiments, simulations and measurements that
+          the model cannot rewrite after seeing the result. These properties turn
+          problem formulation, experiment design, failure attribution and
+          revision into observable decisions rather than qualities of a final
+          answer, so they can be trained on directly and credited even when the
+          outcome is negative. Science also makes evaluator incompleteness
+          visible: benchmark leakage, simulator artifacts and non-reproducible
+          effects can all create apparent progress without stronger knowledge.
+        </p>
+
+        <p>
+          <span class="lead-in">Discovery is recursive.</span>
+          Validated findings update our understanding of the world and seed the
+          next round of questions, and a discovery system can go further by
+          revising its own skills, tools, simulators, memory and evaluators.
+          Recursive scientific improvement carries a larger validation burden,
+          because one update can change which problems are selected, which
+          evidence is collected and how success is judged: a benchmark generator
+          that silently drops hard cases, or an evaluator that starts rewarding
+          internal agreement, can make measured performance rise while real
+          discovery ability narrows. The near-term question is therefore not
+          unrestricted autonomy, but whether bounded, reversible changes to a
+          discovery system yield repeatable gains under external validation.
+        </p>
+      </div>
+
+      <p class="pullquote">
+        How can foundation-model systems move from solving the problems we give
+        them to deciding what is worth discovering, testing explanations against
+        evidence they cannot rewrite, and becoming better discoverers over time?
+      </p>
+
+      <h3 class="mt-9 mb-4">
+        How this compares with the paradigms it builds on
+      </h3>
+      <div class="scroller" tabindex="0" role="region"
+           aria-label="Capability targets of scientific-AI paradigms, scrollable table">
+        <table>
+          <caption>
+            Typical capability targets of scientific-AI paradigms, adapted from
+            the Discovery Foundation Models technical report. Entries describe
+            typical targets rather than properties of every system. "Not
+            defining" means the paradigm does not require the capability;
+            "optional" means some systems support it without treating it as
+            defining. For discovery foundation models, intervention design is
+            required when the setting permits active evidence acquisition.
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Paradigm</th>
+              <th scope="col">Problem source</th>
+              <th scope="col">Representation change</th>
+              <th scope="col">Intervention design</th>
+              <th scope="col">Problem revision</th>
+              <th scope="col">External grounding</th>
+              <th scope="col">Skill transfer</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Foundation models for science</th>
+              <td>Given</td><td>Limited</td><td>External</td>
+              <td>Not defining</td><td>Data</td><td>Not defining</td>
+            </tr>
+            <tr>
+              <th scope="row">Scientific reasoning models</th>
+              <td>Given</td><td>Limited</td><td>Limited</td>
+              <td>Not defining</td><td>Tasks or verifiers</td><td>Not defining</td>
+            </tr>
+            <tr>
+              <th scope="row">Scientific agents and AI scientists</th>
+              <td>Often given</td><td>Optional</td><td>Often</td>
+              <td>Optional</td><td>Tools and environments</td><td>Usually task-specific</td>
+            </tr>
+            <tr>
+              <th scope="row">Search and evaluator systems</th>
+              <td>Given</td><td>Fixed</td><td>Domain dependent</td>
+              <td>Not defining</td><td>Evaluator</td><td>Not defining</td>
+            </tr>
+            <tr>
+              <th scope="row">Autonomous laboratories</th>
+              <td>Often given</td><td>Task defined</td><td>Required</td>
+              <td>Optional</td><td>Physical</td><td>Not defining</td>
+            </tr>
+            <tr class="is-dfm">
+              <th scope="row">Discovery foundation models</th>
+              <td>Constructed</td><td>Required</td><td>Required</td>
+              <td>Required</td><td>Required</td><td>Required</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="footnote mt-6">
+        The term Discovery Foundation Model was introduced in a technical report
+        by two of the organizers. The workshop treats it as an open research
+        target, not as any particular system; AI co-scientists, self-driving
+        laboratories, and equation and causal discovery all address parts of it
+        and are in scope.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================ 02 challenges ============================ -->
+  <section class="sec" id="challenges" aria-labelledby="h-challenges">
+    <div class="shell">
+      <div class="sec__head">
+        <span class="sec__num">02 · Key challenges</span>
+        <h2 id="h-challenges">Five open problems we would like the workshop to move</h2>
+      </div>
+
+      <ol class="numbered">
+        <li>
+          <h3>Framing and modeling</h3>
+          <ul class="tags"><li class="tag tag--accent">Find</li></ul>
+          <p>
+            Can a system recognize from evidence that the question, variables or
+            evaluator it was given are inadequate, and construct a formulation
+            whose candidate explanations differ in mechanism, not only in
+            wording?
+          </p>
+        </li>
+        <li>
+          <h3>Discriminating evidence</h3>
+          <ul class="tags"><li class="tag tag--accent">Test</li></ul>
+          <p>
+            How should a system choose experiments that can change the status of
+            competing explanations under cost and risk, and attribute an
+            unexpected outcome to theory, measurement, protocol or confounding
+            before deciding what to revise?
+          </p>
+        </li>
+        <li>
+          <h3>Learning from dry-lab and wet-lab feedback</h3>
+          <ul class="tags"><li class="tag tag--accent">Improve</li></ul>
+          <p>
+            Dry-lab signals, such as simulations, learned predictors and tests
+            the system writes for itself, are cheap and dense but are proxies
+            that a policy can exploit, while wet-lab measurements provide
+            stronger external grounding but are slow, costly and delayed. How
+            should training combine the two, and credit information gain and
+            evidence-grounded revision rather than final success alone?
+          </p>
+        </li>
+        <li>
+          <h3>Safe and verifiable recursion</h3>
+          <ul class="tags"><li class="tag tag--accent">Improve</li></ul>
+          <p>
+            Which parts of a discovery system may it modify, and how should
+            validation, provenance and rollback scale with how far an update's
+            effects reach?
+          </p>
+        </li>
+        <li>
+          <h3>Evaluating the process</h3>
+          <ul class="tags"><li class="tag">Across the loop</li></ul>
+          <p>
+            Final-answer scores cannot separate discovery from retrieval,
+            leakage or extra compute, and they give no credit to a justified
+            negative result. How can benchmarks credit the process, and separate
+            progress in the current investigation from improvement in future
+            discovery ability?
+          </p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============================ 03 topics ============================ -->
+  <section class="sec" id="topics" aria-labelledby="h-topics">
+    <div class="shell">
+      <div class="sec__head">
+        <span class="sec__num">03 · Topics of interest</span>
+        <h2 id="h-topics">What the workshop would invite papers on</h2>
+        <p class="sec__lede">
+          Eight topics, following the order of the agenda: find, test, improve,
+          and the evaluation and governance that hold across the loop.
+        </p>
+      </div>
+
+      <ol class="topics">
+        <li>
+          <span class="lead-in">Problem discovery and formulation</span>
+          Identifying valuable unknowns in residuals, contradictions and failed
+          replications; rejecting artifacts; and turning anomalies into bounded,
+          testable problems.
+        </li>
+        <li>
+          <span class="lead-in">Representation and hypothesis construction</span>
+          Latent variables, changes of scale, and causal, symbolic or
+          programmatic reformulation; mechanistically distinct, falsifiable
+          explanations.
+        </li>
+        <li>
+          <span class="lead-in">Intervention design and evidence-grounded revision</span>
+          Choosing experiments, simulations and replications by their expected
+          information, and updating whichever part of the research state is at
+          fault.
+        </li>
+        <li>
+          <span class="lead-in">Grounding across digital, simulated and physical worlds</span>
+          Discovery in mathematics, code and machine-learning research;
+          simulators and digital twins; and self-driving laboratories and
+          dry-lab to wet-lab loops.
+        </li>
+        <li>
+          <span class="lead-in">Learning to discover</span>
+          Research trajectories and interactive research environments, process
+          supervision, reinforcement learning from scientific feedback that
+          combines dry-lab and wet-lab signals, research world models that
+          predict outcomes, costs and risks before a physical test, curricula
+          that move from simulation to physical experiments, and discovery
+          skills that transfer across domains.
+        </li>
+        <li>
+          <span class="lead-in">Recursive discovery and self-improvement</span>
+          Systems that revise their own discovery skills, tools, simulators,
+          evaluators and memory; bounded, versioned, reversible improvement
+          validated on externally selected tasks.
+        </li>
+        <li>
+          <span class="lead-in">Process-centered evaluation</span>
+          Benchmarks that credit formulation, intervention and revision rather
+          than final answers alone, with controls for leakage and extra compute.
+        </li>
+        <li>
+          <span class="lead-in">Epistemics, governance and safety</span>
+          Claim status and independent validation, provenance and auditability,
+          scoped authority and human oversight, and dual-use concerns in
+          autonomous science.
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============================ 04 submissions ============================ -->
+  <section class="sec" id="submissions" aria-labelledby="h-submissions">
+    <div class="shell">
+      <div class="sec__head">
+        <span class="sec__num">04 · Submissions</span>
+        <h2 id="h-submissions">Four proposed tracks</h2>
+        <p class="sec__lede">
+          Two of the tracks exist because of the theme: they bring problem owners
+          from the sciences and well-attributed failures into the programme.
+        </p>
+      </div>
+
+      <div class="notice notice--inline mb-6" role="note">
+        <p class="notice__tag">Not open</p>
+        <p>
+          Submissions are not open and the tracks below are proposed, not
+          confirmed. Nothing here is a call for papers. If the workshop is
+          accepted, the call and the submission site would follow the timeline in
+          the next section.
+        </p>
+      </div>
+
+      <ul class="tracks">
+        <li class="track">
+          <p class="track__limit">Up to 8 pages</p>
+          <h3>Full papers</h3>
+          <p>
+            Following the ICLR 2027 template.
+          </p>
+        </li>
+        <li class="track">
+          <p class="track__limit">Up to 4 pages</p>
+          <h3>Tiny papers</h3>
+          <p>
+            Less-than-full-conference work: an implementation and evaluation of
+            an unpublished but simple idea, a modest but self-contained
+            theoretical result, a follow-up experiment or re-analysis of a
+            published paper, or a fresh perspective on an existing publication.
+            The track is meant to broaden participation by students,
+            early-career researchers and domain scientists, and as ICLR requires,
+            tiny papers must be primarily human-authored.
+          </p>
+        </li>
+        <li class="track">
+          <p class="track__limit">Up to 2 pages</p>
+          <h3>Open Discovery Problems</h3>
+          <p>
+            Scientists describe an unsolved problem together with the data and
+            validation conditions needed to attack it.
+          </p>
+        </li>
+        <li class="track">
+          <p class="track__limit">Up to 4 pages</p>
+          <h3>Negative Results and Failure Analyses</h3>
+          <p>
+            A well-attributed failure of an AI-driven discovery attempt, treated
+            as a contribution.
+          </p>
+        </li>
+      </ul>
+
+      <div class="stack prose mt-7">
+        <h3>Review process</h3>
+        <p>
+          The workshop would be non-archival, and papers already published at an
+          archival venue, including the ICLR 2027 main conference, would not be
+          eligible. Reviewing is double-blind on OpenReview, with at least three
+          reviews per full paper and two per shorter submission. We expect 80 to
+          150 submissions and will recruit about 160 reviewers, so that no
+          reviewer handles more than three papers even if every submission is a
+          full paper, and each paper is assigned both machine-learning and
+          domain-science reviewers. We expect to accept 40 to 60 papers.
+        </p>
+        <p>
+          Authors are encouraged, but not required, to state briefly which parts
+          of the research structure were given and which the system constructed
+          or revised, which evidence supports each claim, and where humans
+          intervened.
+        </p>
+        <h3>Conflicts and the use of AI</h3>
+        <p>
+          No organizer handles a submission from their own organization.
+          Submissions from the organizers' groups or from PhAI Labs are handled
+          by a senior program-committee member outside these groups and are not
+          eligible for awards.
+        </p>
+        <p>
+          AI systems will not serve as authors or reviewers. AI-generated
+          submissions will not be accepted, AI-assisted writing is permitted if
+          clearly disclosed in accordance with the ICLR 2027 policy, and
+          reviewers may not use AI tools to write their reviews or upload
+          submissions to external AI services.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ 05 dates ============================ -->
+  <section class="sec" id="dates" aria-labelledby="h-dates">
+    <div class="shell">
+      <div class="sec__head">
+        <span class="sec__num">05 · Important dates</span>
+        <h2 id="h-dates">The proposed timeline</h2>
+        <p class="sec__lede">
+          The timeline the proposal sets out in order to meet ICLR's mandatory
+          notification date of February 26, 2027. Every date here is proposed and
+          depends on the workshop being accepted.
+        </p>
+      </div>
+
+      <ol class="dates">
+        <li>
+          <p class="when">Early December 2026</p>
+          <p class="what">
+            Call for papers and website launch, with a reminder that authors need
+            an OpenReview profile well before the deadline.
+          </p>
+        </li>
+        <li class="is-key">
+          <p class="when">January 29, 2027</p>
+          <p class="what">Workshop paper submission deadline.</p>
+        </li>
+        <li>
+          <p class="when">January 30 to February 17, 2027</p>
+          <p class="what">Reviewing.</p>
+        </li>
+        <li class="is-key">
+          <p class="when">February 24, 2027</p>
+          <p class="what">
+            Notification of acceptance, with accepted papers public on OpenReview
+            and imported into iclr.cc.
+          </p>
+        </li>
+        <li>
+          <p class="when">March 19, 2027</p>
+          <p class="what">Camera-ready deadline.</p>
+        </li>
+        <li>
+          <p class="when">March 26, 2027</p>
+          <p class="what">
+            Schedule with opening and closing times on iclr.cc, and talk titles
+            public.
+          </p>
+        </li>
+        <li>
+          <p class="when">April 14, 2027</p>
+          <p class="what">Schedule finalized in the ICLR organizer portal.</p>
+        </li>
+        <li class="is-key">
+          <p class="when">April 29 or 30, 2027</p>
+          <p class="what">
+            Workshop, in San Francisco. The day is assigned by ICLR and is not
+            yet fixed.
+          </p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============================ 06 programme ============================ -->
+  <section class="sec" id="programme" aria-labelledby="h-programme">
+    <div class="shell">
+      <div class="sec__head">
+        <span class="sec__num">06 · Programme</span>
+        <h2 id="h-programme">A full day built around structured interaction</h2>
+      </div>
+
+      <div class="stack prose">
+        <p>
+          We propose a full-day, in-person workshop combining invited talks,
+          contributed presentations, posters and an open discussion, to balance
+          intellectual depth with structured interaction. The programme would
+          feature seven invited talks, four contributed talks, three spotlights
+          from the Negative Results and Failure Analyses track, a pitch session
+          for the Open Discovery Problems track, two one-hour poster sessions
+          integrated with coffee breaks, and a closing open discussion. The
+          invited talks follow the agenda: find in the morning, test in the early
+          afternoon and improve in the late afternoon. In total, the poster
+          sessions, problem pitches and closing discussion give nearly three
+          hours of structured interaction. An awards session concludes the day.
+        </p>
+      </div>
+
+      <div class="notice notice--inline mt-5 mb-6" role="note">
+        <p class="notice__tag">Speakers</p>
+        <p>
+          Invited speakers will be listed here once they have confirmed. The slots
+          below are the structure of the proposed day, and the timings are the
+          ones in the proposal.
+        </p>
+      </div>
+
+      <div class="scroller scroller--narrow">
+        <table class="sched">
+          <caption>Tentative schedule, in local time. Speakers to be announced.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Time</th>
+              <th scope="col">Session</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">8:40&ndash;8:50</th><td>Opening remarks</td></tr>
+            <tr><th scope="row">8:50&ndash;9:20</th><td>Invited talk 1, find <span class="tbd">To be announced</span></td></tr>
+            <tr><th scope="row">9:20&ndash;9:50</th><td>Invited talk 2, find <span class="tbd">To be announced</span></td></tr>
+            <tr class="is-break"><th scope="row">9:50&ndash;10:50</th><td>Coffee break and poster session I</td></tr>
+            <tr><th scope="row">10:50&ndash;11:20</th><td>Invited talk 3, find <span class="tbd">To be announced</span></td></tr>
+            <tr><th scope="row">11:20&ndash;11:50</th><td>Invited talk 4, find <span class="tbd">To be announced</span></td></tr>
+            <tr><th scope="row">11:50&ndash;12:10</th><td>Open Discovery Problems pitches</td></tr>
+            <tr class="is-break"><th scope="row">12:10&ndash;13:10</th><td>Lunch</td></tr>
+            <tr><th scope="row">13:10&ndash;13:40</th><td>Invited talk 5, test <span class="tbd">To be announced</span></td></tr>
+            <tr><th scope="row">13:40&ndash;14:10</th><td>Invited talk 6, test <span class="tbd">To be announced</span></td></tr>
+            <tr><th scope="row">14:10&ndash;14:50</th><td>Contributed talks, 10 minutes each</td></tr>
+            <tr class="is-break"><th scope="row">14:50&ndash;15:50</th><td>Coffee break and poster session II</td></tr>
+            <tr><th scope="row">15:50&ndash;16:20</th><td>Invited talk 7, improve <span class="tbd">To be announced</span></td></tr>
+            <tr><th scope="row">16:20&ndash;16:50</th><td>Negative results spotlights</td></tr>
+            <tr><th scope="row">16:50&ndash;17:20</th><td>Closing discussion</td></tr>
+            <tr><th scope="row">17:20&ndash;17:30</th><td>Awards and closing remarks</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="stack prose mt-7">
+        <h3>Closing discussion</h3>
+        <p>
+          The workshop closes with an open discussion, moderated by the organizers
+          and open to all participants, around three questions on which we expect
+          disagreement: how far a discovery system should be allowed to revise its
+          own evaluator, and what must stay outside its self-modification; whether
+          many automated runs are stronger evidence of discovery ability than a
+          few well-audited investigations; and how credit for a discovery should
+          be divided between the model and the humans, tools and laboratories
+          around it. Questions for the discussion are also collected through an
+          online form during the day.
+        </p>
+
+        <h3>Awards</h3>
+        <p>
+          We will present up to three awards: Best Paper, Best Open Discovery
+          Problem, and Best Grounded Discovery. The last goes to the submission
+          whose claims rest most convincingly on evidence the system cannot
+          rewrite, such as wet-lab experiments, independent replication, or
+          hidden-test and held-out validation in digital settings, whether the
+          outcome confirms or refutes the original hypothesis. Winners are
+          presented in the contributed talks, spotlights or pitches.
+        </p>
+
+        <h3>Interaction and access</h3>
+        <p>
+          ICLR 2027 workshops are held in person. To engage those who cannot
+          attend, invited talks and the closing discussion will be recorded where
+          ICLR provides recording and the speakers and discussion participants
+          agree; otherwise we will post speaker-provided videos or slides on the
+          workshop website. Accepted papers, posters and slides will be posted on
+          OpenReview and the workshop website, and talk titles will be public
+          before the conference. Within four weeks of the workshop we will publish
+          the curated list of open discovery problems with their validation
+          conditions, together with a short report on the closing discussion.
+          Authors or speakers who cannot travel, for example because of visa
+          delays, can present through a pre-recorded video, with their poster
+          displayed by an organizer.
+        </p>
+
+        <h3>Expected audience</h3>
+        <p>
+          We anticipate 150 to 200 sustained in-person participants, with peak
+          attendance of 250 to 350. This estimate is based on comparable ICLR
+          workshops and on the more than 250 submissions received by the ICLR 2026
+          Lifelong Agents workshop, co-organized by members of our team. We will
+          promote the workshop through a dedicated website, social media,
+          OpenReview, mailing lists in machine learning and in computational
+          biology, chemistry and materials science, and the organizers' networks.
+          For the Open Discovery Problems track we will reach out directly to
+          self-driving-laboratory consortia and domain-science communities, since
+          real problem owners are what make the track useful.
+        </p>
+
+        <h3>Inclusion and funding</h3>
+        <p>
+          A central part of our outreach is active engagement with affinity
+          groups, including WiML, LatinX in AI, Black in AI, Queer in AI and
+          {Dis}Ability in AI, as well as universities in the San Francisco Bay
+          Area. We will host mentoring tables at lunch, open at least one
+          contributed talk to the tiny paper track, and invite students to join
+          the program committee as reviewers paired with senior reviewers. We will
+          seek sponsorship from industry and research foundations for the awards
+          and for student travel grants. ICLR provides four complimentary
+          registrations per workshop, which we will allocate to students and
+          early-career authors from under-resourced institutions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ 07 organizers ============================ -->
+  <section class="sec" id="organizers" aria-labelledby="h-organizers">
+    <div class="shell">
+      <div class="sec__head">
+        <span class="sec__num">07 · Organizers</span>
+        <h2 id="h-organizers">The people proposing the workshop</h2>
+        <p class="sec__lede">
+          Four organizers and three senior organizers. As a team, the organizers
+          have run more than ten workshop editions at ICML, ICLR, ICCV, CVPR and
+          COLM. Organizers moderate the sessions and give no talks at the
+          workshop.
+        </p>
+      </div>
+
+      <h3 class="subhead" id="sh-org">Organizers</h3>
+      <ul class="people" aria-labelledby="sh-org">
+        <li class="person">
+          <div class="person__head">
+            <img src="assets/img/organizers/zhenfei_yin.webp" width="240" height="300"
+               alt="Portrait photograph of Zhenfei Yin." loading="lazy" decoding="async">
+            <div>
+              <h4>Zhenfei Yin</h4>
+            <p class="affil">University of Oxford; Shanghai Innovation Institute; PhAI Labs</p>
+            </div>
+          </div>
+          <p class="bio">
+              An incoming assistant professor at the Shanghai Innovation Institute,
+              a postdoctoral researcher at the University of Oxford working with
+              Philip Torr, and a co-founder of PhAI Labs. Research interests
+              include multimodal learning, AI agents, multi-agent systems,
+              embodied agents and AI for science. Has organized Trustworthy
+              Multimodal Foundation Models and AI Agents and Multi-modal
+              Foundation Model meets Embodied AI at ICML 2024, Multi-Agent Systems
+              in the Era of Foundation Models at ICML 2025, Multi-Modal Reasoning
+              for Agentic Intelligence at ICCV 2025 and CVPR 2026, and Lifelong
+              Agents at ICLR 2026 and COLM 2026.
+            </p>
+          <ul class="links">
+              <li><a href="https://yinzhenfei.github.io/">Website</a></li>
+              <li><a href="mailto:jeremyyin@robots.ox.ac.uk">Email</a></li>
+            </ul>
+        </li>
+
+        <li class="person">
+          <div class="person__head">
+            <img src="assets/img/organizers/ling_yang.webp" width="240" height="300"
+               alt="Portrait photograph of Ling Yang." loading="lazy" decoding="async">
+            <div>
+              <h4>Ling Yang</h4>
+            <p class="affil">Princeton University; Peking University; PhAI Labs</p>
+            </div>
+          </div>
+          <p class="bio">
+              An incoming assistant professor at Peking University, a postdoctoral
+              researcher at Princeton University working with Mengdi Wang, and a
+              co-founder of PhAI Labs. Research covers post-training of large
+              language models and agents, reinforcement learning systems,
+              recursive self-improvement and discovery intelligence;
+              representative works include Buffer of Thoughts, the ReasonFlux
+              series and RLAnything. Built the Gen-Verse open-source community,
+              received the 2026 WAIC Yunfan Award, and serves as an area chair for
+              ICML, ICLR and NeurIPS.
+            </p>
+          <ul class="links">
+              <li><a href="https://yangling0818.github.io/">Website</a></li>
+              <li><a href="mailto:yang@phai-labs.com">Email</a></li>
+            </ul>
+        </li>
+
+        <li class="person">
+          <div class="person__head">
+            <img src="assets/img/organizers/zhaochen_yu.webp" width="240" height="300"
+               alt="Portrait photograph of Zhaochen Yu." loading="lazy" decoding="async">
+            <div>
+              <h4>Zhaochen Yu</h4>
+            <p class="affil">National University of Singapore</p>
+            </div>
+          </div>
+          <p class="bio">
+              A Ph.D. student at the National University of Singapore advised by
+              Shuicheng Yan. Research covers reasoning and agentic reinforcement
+              learning for large language models and recursive self-improvement of
+              agent harnesses, with representative works including Buffer of
+              Thoughts, SuperCorrect, ReasonFlux and Recuris. Has served as a
+              reviewer for NeurIPS, ICLR, ICML, AISTATS and AAAI.
+            </p>
+          <ul class="links">
+              <li><a href="https://zhaochenyu0201.github.io/">Website</a></li>
+            </ul>
+        </li>
+
+        <li class="person">
+          <div class="person__head">
+            <img src="assets/img/organizers/cheng_qian.webp" width="240" height="300"
+               alt="Portrait photograph of Cheng Qian." loading="lazy" decoding="async">
+            <div>
+              <h4>Cheng Qian</h4>
+            <p class="affil">University of Illinois Urbana-Champaign</p>
+            </div>
+          </div>
+          <p class="bio">
+              A Ph.D. student at the University of Illinois Urbana-Champaign
+              advised by Heng Ji, and a Capital One ASKS Center Fellow. Research
+              covers large-language-model agents, including tool use, reasoning,
+              user alignment and creativity, with representative works including
+              CREATOR, ToolRL and UserRL. Main organizer of Lifelong Agents at
+              ICLR 2026 and COLM 2026, and an area chair for ACL Rolling Review.
+            </p>
+          <ul class="links">
+              <li><a href="https://qiancheng0.github.io/">Website</a></li>
+              <li><a href="mailto:chengq9@illinois.edu">Email</a></li>
+            </ul>
+        </li>
+      </ul>
+
+      <h3 class="subhead" id="sh-senior">Senior organizers</h3>
+      <p class="sec__lede mt-4">
+        The senior organizers have shaped the theme and scope of the workshop,
+        and their experience guides its vision, structure and academic direction.
+      </p>
+      <ul class="people" aria-labelledby="sh-senior">
+        <li class="person">
+          <div class="person__head">
+            <img src="assets/img/organizers/philip_torr.webp" width="240" height="300"
+               alt="Portrait photograph of Philip Torr." loading="lazy" decoding="async">
+            <div>
+              <h4>Philip Torr</h4>
+            <p class="affil">University of Oxford</p>
+            </div>
+          </div>
+          <p class="bio">
+              A Professor at the University of Oxford, holding the Five AI and
+              Royal Academy of Engineering Research Chair in Computer Vision and
+              Machine Learning. Accolades include the Marr Prize, a Royal Society
+              Wolfson Research Merit Award, and fellowships of both the Royal
+              Academy of Engineering and the Royal Society; a Turing AI
+              World-Leading Researcher Fellow. Has co-organized Foundation Models
+              in the Wild at ICML 2024 and ICLR 2025, and Multi-Agent Systems in
+              the Era of Foundation Models at ICML 2025.
+            </p>
+          <ul class="links">
+              <li><a href="https://eng.ox.ac.uk/people/philip-torr/">Website</a></li>
+              <li><a href="mailto:philip.torr@eng.ox.ac.uk">Email</a></li>
+            </ul>
+        </li>
+
+        <li class="person">
+          <div class="person__head">
+            <img src="assets/img/organizers/mengdi_wang.webp" width="240" height="300"
+               alt="Portrait photograph of Mengdi Wang." loading="lazy" decoding="async">
+            <div>
+              <h4>Mengdi Wang</h4>
+            <p class="affil">Princeton University</p>
+            </div>
+          </div>
+          <p class="bio">
+              A Professor of Electrical and Computer Engineering and of the Center
+              for Statistics and Machine Learning at Princeton University, and
+              Co-Director of Princeton AI for Accelerated Invention. Research
+              spans reinforcement learning, generative AI and AI for science,
+              including agentic discovery systems such as CRISPR-GPT and LabOS.
+              Was a Program Chair of ICLR 2023 and has co-organized workshops
+              including MLGenX at ICLR 2025, Lifelong Agents at ICLR 2026, and AI
+              for Science: AI Scientists at ICML 2026.
+            </p>
+          <ul class="links">
+              <li><a href="https://mwang.princeton.edu/">Website</a></li>
+              <li><a href="mailto:mengdiw@princeton.edu">Email</a></li>
+            </ul>
+        </li>
+
+        <li class="person">
+          <div class="person__head">
+            <img src="assets/img/organizers/shuicheng_yan.webp" width="240" height="300"
+               alt="Portrait photograph of Shuicheng Yan." loading="lazy" decoding="async">
+            <div>
+              <h4>Shuicheng Yan</h4>
+            <p class="affil">National University of Singapore</p>
+            </div>
+          </div>
+          <p class="bio">
+              A Distinguished Professor on the Practice Track at the School of
+              Computing, National University of Singapore, where he leads LV-Lab;
+              previously Group Chief Scientist at Sea Group. A Fellow of the
+              Singapore Academy of Engineering, AAAI, ACM, IEEE and IAPR. Current
+              research interests include efficient, executive and evolving AI. Has
+              published more than 800 papers and has been named a Highly Cited
+              Researcher for ten years.
+            </p>
+          <ul class="links">
+              <li><a href="https://www.comp.nus.edu.sg/cs/people/yansc/">Website</a></li>
+            </ul>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================ 08 significance ============================ -->
+  <section class="sec" id="significance" aria-labelledby="h-significance">
+    <div class="shell">
+      <div class="sec__head">
+        <span class="sec__num">08 · Significance</span>
+        <h2 id="h-significance">Why now, and how this differs from related workshops</h2>
+      </div>
+
+      <div class="stack prose">
+        <p>
+          This would be the first edition of the workshop. The building blocks of
+          AI-driven discovery now exist: AI-scientist systems with peer-reviewed
+          demonstrations, autonomous laboratories, and early dry-lab to wet-lab
+          loops in which physical results revise targets, assays and mechanism
+          hypotheses across rounds. As execution becomes automated, verification
+          alone is not enough: it checks an answer against the question and
+          evaluator it was given, and cannot tell when either is wrong. The
+          central challenge is therefore no longer only whether AI systems can
+          carry out research, but whether they can find what is worth researching,
+          test it against evidence, and improve at doing so. The questions that
+          remain, namely what the training signal for discovery is, what should be
+          evaluated, and what transfers across domains, are learning questions,
+          which makes ICLR the natural venue to address them in the open.
+        </p>
+        <p>
+          Several workshops have advanced adjacent parts of this agenda. The AI
+          for Science and Foundation Models for Science series overlap with parts
+          of our agenda: the former centers on the infrastructure of AI scientists
+          such as workbenches, orchestration and evaluators for hypothesis,
+          experiment and observation loops, and the latter on foundation-model
+          agents that formulate and revise hypotheses and choose tool-mediated
+          actions. Neither centers the model's own ability to find and formulate
+          problems and to revise its research representation, nor accepts
+          recursive improvement only on new external evidence. Workshops centered
+          on world models treat predictive models of the world as the object of
+          study; for us a research world model is one component of a discovery
+          loop whose problem, representation and evaluator are themselves revised
+          from evidence.
+        </p>
+        <p>
+          Our workshop differs by treating hypothesis generation, autonomous
+          laboratories and self-improvement not as separate themes but as parts of
+          one discovery loop over a revisable research state, and by asking how
+          they interact: how the framing of a problem fixes what counts as
+          success, how cheap dry-lab proxies shape what a model learns to propose,
+          and how a self-improving system can change the criteria by which its own
+          progress is judged. It treats the research structure, evaluator
+          included, as something the system revises from evidence. It asks how
+          discovery can be trained and credited as a model capability. And unlike
+          previous self-improvement workshops, which treat science as one
+          application among many, it studies recursive self-improvement in which
+          an update is accepted only when new external evidence supports it. To
+          our knowledge, none of these workshops has offered tracks for open
+          problems posed by scientists or for well-attributed failures.
+        </p>
+      </div>
+
+      <h3 class="mt-7 mb-4">Related workshops</h3>
+      <ul class="related">
+        <li><a href="https://ai4sciencecommunity.github.io/">AI for Science</a> <span class="venue">series, most recently at ICML 2026, with a NeurIPS 2026 edition upcoming</span></li>
+        <li><a href="https://iclr.cc/virtual/2026/workshop/10000801">Foundation Models for Science</a> <span class="venue">NeurIPS 2024, ICLR 2026</span></li>
+        <li><a href="https://iclragenticai.github.io/">Towards Agentic AI for Science</a> <span class="venue">ICLR 2025</span></li>
+        <li><a href="https://www.gembio.ai/">GEM</a> <span class="venue">ICLR 2024 to 2026</span></li>
+        <li>AI4Mat <span class="venue">ICLR 2025 to 2026</span></li>
+        <li><a href="https://iclr.cc/virtual/2025/workshop/23971">Self-Improving Foundation Models Without Human Supervision</a> <span class="venue">ICLR 2025</span></li>
+        <li><a href="https://recursive-workshop.github.io/">AI with Recursive Self-Improvement</a> <span class="venue">ICLR 2026</span></li>
+        <li><a href="https://sites.google.com/view/rlxf-icml2026/">Reinforcement Learning from World Feedback</a> <span class="venue">ICML 2026</span></li>
+        <li><a href="https://lifelongagent.github.io/">Lifelong Agents</a> <span class="venue">ICLR 2026, COLM 2026, which several of us organize</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================ 09 contact ============================ -->
+  <section class="sec" id="contact" aria-labelledby="h-contact">
+    <div class="shell">
+      <div class="sec__head">
+        <span class="sec__num">09 · Contact</span>
+        <h2 id="h-contact">Getting in touch</h2>
+      </div>
+
+      <div class="stack prose">
+        <p>
+          The proposal does not yet set a workshop contact address or a public
+          workshop URL, so this page does not list either. Rather than invent one,
+          we leave the gap: until a shared address exists, please write to any of
+          the organizers directly through the addresses and personal pages in
+          <a href="#organizers">Section 07</a>.
+        </p>
+        <p>
+          Questions about the proposal itself, about the Open Discovery Problems
+          track, or about reviewing are all welcome by that route.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="shell">
+    <p>
+      This page describes a workshop proposed for ICLR 2027. It has not been
+      accepted, and nothing on it is final. The content comes from the proposal
+      submitted for review; the workshop date, the programme, the submission
+      dates and the sponsorship are all contingent on acceptance and on ICLR.
+    </p>
+    <p>Last updated: October 10, 2026. Acceptance pending.</p>
+    <ul class="foot-links">
+      <li><a href="https://iclr.cc/">ICLR</a></li>
+      <li><a href="#organizers">Organizers</a></li>
+      <li><a href="#top">Back to top</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="assets/enhance.js" defer></script>
+</body>
+</html>

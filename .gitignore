@@ -1,0 +1,5 @@
+# The proposal source is kept out of this repository on purpose.
+# This site is published with .nojekyll, so every committed file is served
+# verbatim and would be readable at <site>/_proposal/. The proposal is
+# working material for the organizers, not public material.
+_proposal/
