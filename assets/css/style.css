@@ -389,7 +389,10 @@ tbody tr:last-child > * { border-bottom: 0; }
 .t-schedule tr.r-panel th { font-weight: var(--fw-b); color: var(--navy); box-shadow: inset 4px 0 0 var(--accent); }
 .t-schedule tr.r-talk th { font-weight: var(--fw-m); }
 
-.scroll-hint { font-size: var(--fs-xs); color: var(--muted); margin: var(--s3) 0 0; }
+.scroll-hint { font-size: var(--fs-xs); color: var(--muted); margin: 0 0 var(--s3); }
+/* read before the table, where the clipped header would otherwise look like a
+   rendering fault; from 960px the matrix fits and there is nothing to scroll */
+@media (min-width: 960px) { .scroll-hint { display: none; } }
 
 /* ----------------------------------------------------------------- people */
 .people-grid {
@@ -441,6 +444,10 @@ tbody tr:last-child > * { border-bottom: 0; }
 .back-to-top:active { translate: 0 1px; }
 .back-to-top svg { width: 22px; height: 22px; }
 .no-js .back-to-top { display: none; }
+/* under 576px the 44px disc sits inside a 358px reading column and covers
+   the end of whatever line scrolls beneath it; the wordmark in the fixed
+   header already links to #top, so the phone loses nothing without it */
+@media (max-width: 575px) { .back-to-top { display: none; } }
 
 /* ----------------------------------------------------------------- footer */
 #footer { background: var(--night); color: var(--dim); padding: var(--s12) 0; font-size: var(--fs-xs); }
